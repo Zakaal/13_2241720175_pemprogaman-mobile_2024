@@ -1,11 +1,13 @@
 
-# *04 | Pengantar Bahasa Pemrograman Dart - Bagian 3*
+# *Pertemuan 4 - Pengantar Bahasa Pemrograman Dart*
 
-**Nama** : Mochammad Nizar Mahi
+**Nama** : Mochammad Zakaro Al Fajri
 
-**NIM** : 2241720185
+**NIM** : 2241720175
 
-**Kelas** : TI-3F / 13
+**Kelas** : TI-3F
+
+**No Absen : 14**
 
 ## Praktikum 1 | Eksperimen Tipe Data List
 **Langkah 1**:
