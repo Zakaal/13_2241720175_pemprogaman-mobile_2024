@@ -28,7 +28,7 @@ void main() {
 
 Output:
 
-
+![p1l1](asset/p1no1.png)
 
 Jawab : Yang terjadi adalah muncul pesan error yang disebabkan karena terdapat penulisan huruf kapital yang tidak sesuai pada else if dan else. Pada Dart, keyword if, else if, dan else semuanya harus menggunakan huruf kecil
 
@@ -45,7 +45,7 @@ if (test) {
 
 Output : 
 
-
+![p1l2](asset/p1no2.png)
 
 Jawab : Terjadai error yang disebabkan oleh penggunaan tipe data string pada kondisi if. Pada dart, kondisi if harus berupa nilai boolean atau true/false. 
 
@@ -64,7 +64,7 @@ void main() {
 
 Output perbaikan : 
 
-
+![p1l3](asset/p1no2output.png)
 
 ## Praktikum 2 | Menerapkan Perulangan "while" dan "do-while"
 
@@ -81,7 +81,7 @@ while (counter < 33) {
 
 Output : 
 
-
+![p2l1](asset/p2no1.png)
 
 Jawab : Terdapat error yang disebabkan karena belum diinisialisasi nya variable counter sebalum dipakai dalam kondisi while. Sebelum digunakan pada sebuah kondisi/pernyataan, variable harus diinisialisasi terlebih dahulu dengan tipe data
 
@@ -99,7 +99,7 @@ void main(){
 
 Output : 
 
-
+![p2l2](asset/p2no1output.png)
 
 **Langkah 2**
 
@@ -115,7 +115,7 @@ void main(){
 
 Output : 
 
-
+![p2l3](asset/p2no2output.png)
 
 Jawab : Kode pada langkah ini berhasil dan memiliki dengan menggunakan loop do-while. Output berupa mencetak angka mulai dari 1 hingga 76.
 
@@ -133,7 +133,7 @@ for (Index = 10; index < 27; index) {
 
 Output : 
 
-
+![p3l1](asset/p3no1.png)
 
 Jawab : Terjadi error yang disebabkan oleh beberapa faktor, diantaranya 
 - variable index tidak diinisialisi dengan baik
@@ -152,7 +152,7 @@ void main(){
 
 Output : 
 
-
+![p3l2](asset/p3no1output.png)
 
 **LANGKAH 2**
 
@@ -166,7 +166,7 @@ print(index);
 
 Output : 
 
-
+![p3l3](asset/p3no2.png)
 
 Jawab : Terdapat error yang disebabkan oleh beberapa faktor, antara lain : 
 - Penggunaan huruf kapital pada "If" dan "Else IF" yang seharusnya "if", "else if"
@@ -189,7 +189,7 @@ void main() {
 
 Output perbaikan : 
 
-
+![p3l4](asset/p3no2output.png)
 
 ## Tugas Praktikum
 
@@ -224,7 +224,9 @@ void main() {
 }
 ```
 
-Output
+Output : 
+
+![t1l1](asset/t1output.png)
 
 
 
