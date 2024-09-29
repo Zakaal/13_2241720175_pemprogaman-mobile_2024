@@ -7,9 +7,10 @@
 
 **Kelas** : TI-3F
 
-**No Absen : 14**
+**No Absen ** : 14
 
-## Praktikum 1 | Eksperimen Tipe Data List
+## Praktikum 1 (Eksperimen Tipe Data List)
+
 **Langkah 1**:
 ```dart
 var list = [1, 2, 3];
@@ -27,63 +28,65 @@ print(list[1]);
 
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan!
 
-![OutputL1](assets/ScreenshotP1L1.png)
+![p1l2](assets/p1l2.png)
 
-**Jawab** : list dengan nilai [1, 2, 3] dan assert untuk memeriksa beberapa kondisi. Pertama, program memastikan panjang list adalah 3 dan elemen kedua bernilai 2, yang keduanya benar, sehingga tidak ada error. Program kemudian mencetak panjang list (3) dan elemen kedua (2). Setelah itu, elemen kedua diubah dari 2 menjadi 1, dan assert kembali memeriksa bahwa elemen kedua sekarang bernilai 1, yang juga benar. Program lalu mencetak nilai elemen kedua yang baru (1). Output akhirnya adalah 3, 2, dan 1.
+**Jawab** : Kode tersebut mencetak angka 3 2 1 dengan posisi menurun. Pertama, kode tersebut mendeklarasikan  list dengan tiga elemen [1, 2, 3] kemudian menggunakan beberapa pernyataan assert melakukan verifikasi apakah panjang list adalah 3 dan elemen kedua adalah 2. Jika benar, kode selanjutnya dijalankan melakukan pencetakan nilai panjang dari list yaitu 3 dan nilai index 1 yaitu 2. Jika salah akan muncul error . Setelah itu, terdapat proses perubahan nilai pada list index 1 menjadi 1 dan dilakukan verifikasi bahwa nilai list index pertama adalah 1. Terakhir, nilai index 1 yang sudah dirubah (1) akan dicetak.
 
 **Langkah 3**:
 
 ```dart
-  final List<String?> list = List.filled(5, null);
-
-  String nama = "Mochammad Nizar Mahi";
-  String nim = "2241720185";
-
-  list[1] = nama;
-  list[2] = nim;
-
-  assert(list.length == 3);
-  assert(list[1] == 2);
-  print(list.length);
-  print(list[1]);
-
-  list[1] = '1';
-  assert(list[1] == 1);
-  print(list[1]);
+  void main(){
+    final list list = List<String?>.filled(5, null);
+  
+    list[1] = "Mochammad Zakaro Al Fajri";
+    list[2] = "2241720175";
+  
+    assert(list.length == 3);
+    assert(list[1] == 2);
+    print(list.length);
+    print(list[1]);
+  
+    list[1] = '1';
+    assert(list[1] == 1);
+    print(list[1]);
+  }
+  
 ```
-Ubah kode pada langkah 1 menjadi variabel final yang mempunyai index = 5 dengan default value = null. Isilah nama dan NIM Anda pada elemen index ke-1 dan ke-2. Lalu print dan capture hasilnya.
+Ubah kode pada langkah 1 menjadi variabel final yang mempunyai index = 5 dengan default value = null. Isilah nama dan NIM Anda pada elemen index ke-1 dan ke-2. Lalu print dan capture hasilnya. Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
 
 Output : 
-![OutputP1L3](assets/ScreenshotP1L3.png)
 
-Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
+![p1l3](assets/p1l3.png)
 
-perbaikan : 
+Jawab : error tersebut terjadi karena pernyataan "assert(list.length == 3);" tidak benar dan panjang list yang benar adalah 5
+
+kode perbaikan: 
 
 ```dart
-final List<String?> list = List.filled(5, null);
-
-  String nama = "Mochammad Nizar Mahi";
-  String nim = "2241720185";
-
-  list[1] = nama;
-  list[2] = nim;
-
-  assert(list.length == 5);  // Karena list memiliki panjang 5, maka diganti dari 3 menjadi 5
-  assert(list[1] == nama);   // Memastikan elemen list[1] adalah 'nama'
-  print(list.length);
-  print(list[1]);
-
-  list[1] = '1';
-  assert(list[1] == '1');   
-  print(list[1]);
+  void main(){
+    final list = List<String?>.filled(5, null);
+  
+    list[1] = "Mochammad Zakaro Al Fajri";
+    list[2] = "2241720175";
+  
+    assert(list.length == 5);
+    assert(list[1] == "Mochammad Zakaro Al Fajri");
+    assert(list[2] == "2241720175");
+    print(list.length);
+    print(list[1]);
+    print(list[2]); 
+   
+    list[1] = "kaka";
+    assert(list[1] == "kaka");
+    print(list[1]);
+  }
 ```
 
 Output : 
 
-![OutputP1L3B](assets/ScreenshotP1L3B.png)
+![p1l3per](assets/p1l3per.png)
 
-## Praktikum 2 | Eksperimen Tipe Data Set
+## Praktikum 2 (Eksperimen Tipe Data Set)
 
 **Langkah 1**:
 
@@ -98,9 +101,11 @@ Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jela
 
 Output : 
 
-![OutputP2L1](assets/ScreenshotP2L1.png)
+![p2l2](assets/p2l2.png)
 
 **Langkah 3**:
+
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var names1 = <String>{};
@@ -114,36 +119,41 @@ print(names3);
 
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll().
 
-**Jawab** : Yang terjadi adalah seolah" menampilkan 3 set kosong, padahal pada var names3 itu bukan sebuah set melainkan sebuah map, sehingga harus diganti supaya names3 menjadi set.
+**Jawab** : Kode diatas dapat dijalankan dan tidak terdapat error, namun ketiga kode tersebut seolah olah mencetak set kosong. Kode "var names1 = <String>{};" dan 
+"Set<String> names2 = {};" memang benar membuat set ksosng, sedangkan kode "var names3 = {}" tidak membuat set kosong, melainkan map kosong.
 
-```dart
-  var names1 = <String>{};   // Set kosong dengan tipe String
-  Set<String> names2 = {};   // Set kosong dengan tipe String
-  Set<String> names3 = <String>{}; // Set kosong dengan tipe String
-```
+Output : 
+
+![p2l3](assets/p2l3.png)
 
 Kemudian menambahkan elemen Nama dan Nim : 
 
+Kode : 
+
 ```dart
-// Tambahkan elemen menggunakan .add()
-  names1.add("Mochammad Nizar Mahi");
-  names2.add("2241720185");
-  
-  // Tambahkan elemen menggunakan .addAll()
-  names3.addAll(["Mochammad Nizar Mahi", "2241720185"]);
-  
-  print("names1: $names1");
-  print("names2: $names2");
-  print("names3: $names3");
+void main() {
+  var names1 = <String>{};
+  Set<String> names2 = {};
+
+  names1.add("Mochammad Zakaro Al Fajri");
+  names1.add("2241720175");
+
+  names2.addAll({"Mochammad Zakaro Al Fajri", "2241720175"});
+
+  print('Menggunakan .add() = $names1');
+  print('Menggunakan .addAll() = $names2');
+}
 ```
 
 Output : 
 
-![OutputP2L3](assets/ScreenshotP2L3B.png)
+![p2l3per](assets/p2l3per.png)
 
-## Praktikum 3 | Eksperimen Tipe Data Maps
+## Praktikum 3 (Eksperimen Tipe Data Maps)
 
 **Langkah 1**:
+
+Ketik atau salin kode program berikut ke dalam fungsi main().
 
 ```dart
 var gifts = {
@@ -167,13 +177,17 @@ print(nobleGases);
 
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
+Jawab : Kode tersebut berjalan dengan baik. Kode tersebut mencetak nilai yang ada pada map. Perbedaan keduanya yaitu : 
+- gifts : map yang menggunakan string untuk key dan menggunakan tipe data campuran untuk value
+- nobleGases : map yang menggunakan int untuk key dan menggunakan tipe data campuran untuk value
+
 Output : 
 
-![OutputP3L1](assets/ScreenshotP3L1.png)
-
-**Jawab** : Tidak terjadi eror, program berjalan sesuai dengan key-value yang benar pada masing-masing map.
+![p3l2](assets/p3l2.png)
 
 **Langkah 3**:
+
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var mhs1 = Map<String, String>();
@@ -187,23 +201,36 @@ nobleGases[10] = 'neon';
 nobleGases[18] = 'argon';
 ```
 
-Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases, mhs1, dan mhs2).
 
-**Jawab** : Yang terjadi adalah pada gifts[fifth], value nya dirubah dari 1 menjadi 'golden rings', begitu juga value pada nobleGases[18] dari 2 menjadi 'argon'.
+**Jawab** : Kode tersebut merubah value dari "gifts['fifth']" menjadi golden rings
+dan "nobleGases[18]" menjadi argon
+
+Output : 
+
+![p3l3](assets/p3l3.png)
 
 Tambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases, mhs1, dan mhs2).
 
+Kode : 
 ```dart
-  gifts['nama'] = 'Mochammad Nizar Mahi';
-  nobleGases[6] = 'Mochammad Nizar Mahi';
-  mhs1['nama'] = 'Mochammad Nizar Mahi';
-  mhs2[6] = 'Mochammad Nizar Mahi';
-
-  gifts['nim'] = '2241720185';
-  nobleGases[8] = '2241720185';
-  mhs1['nim'] = '2241720185';
-  mhs2[8] = '2241720185';
-
+  var gifts = {
+  };
+  gifts['Nama'] = 'Mochammad Zakaro Al Fajri';
+  gifts['NIM'] = '2241720175';
+  
+  var nobleGases = {
+  };
+  nobleGases[1] = 'Mochammad Zakaro Al Fajri';
+  nobleGases[2] = '2241720175';
+  
+  var mhs1 = Map<String, String>();
+  mhs1['Nama'] = 'Mochammad Zakaro Al Fajri';
+  mhs1['NIM'] = '2241720175';
+  var mhs2 = Map<int, String>();
+  mhs2[1] = 'Mochammad Zakaro Al Fajri';
+  mhs2[2] = '2241720175';
+  
   print(gifts);
   print(nobleGases);
   print(mhs1);
@@ -212,11 +239,13 @@ Tambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases
 
 Output : 
 
-![OutputP3L3B](assets/ScreenshotP3L3B.png)
+![p3l3per](assets/p3l3per.png)
 
-## Praktikum 4 | Eksperimen Tipe Data List: Spread dan Control-flow Operators
+## Praktikum 4 (Eksperimen Tipe Data List: Spread dan Control-flow Operators)
 
 **Langkah 1**:
+
+Ketik atau salin kode program berikut ke dalam fungsi main().
 
 ```dart
 var list = [1, 2, 3];
@@ -226,31 +255,33 @@ print(list2);
 print(list2.length);
 ```
 
-Output : 
-
-![OutputP4L1](assets/ScreenshotP4L1.png)
-
 **Langkah 2**:
 
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
-**Jawab** : yang terjadi adalah muncul pesan eror, yang dikarenakan list1 belum didefinisikan. 
+**Jawab** : Kode tersebut terdapat error yang disebabkan oleh belum terdefinikasi nya list1
 
-Perbaikan : 
+Output : 
+
+![p4l2](assets/p4l2.png)
+
+Kode perbaikan : 
 
 ```dart
-var list = [1, 2, 3];
-var list2 = [0, ...list];
-print(list);
+var list1 = [1, 2, 3];
+var list2 = [0, ...list1];
+print(list1);
 print(list2);
 print(list2.length);
 ```
 
 Output:
 
-![OutputP4L1B](assets/ScreenshotP4L1B.png)
+![p4l2per](assets/p4l2per.png)
 
 **Langkah 3**:
+
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 list1 = [1, 2, null];
@@ -262,11 +293,16 @@ print(list3.length);
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
 Tambahkan variabel list berisi NIM Anda menggunakan Spread Operators. Dokumentasikan hasilnya dan buat laporannya!
 
-**Jawab** : 
+Jawab : Tidak terdapt error pada program tersebut. Program tersebut mendefinisikan list "list1" yang berisi tiga elemen: dua angka dan satu null.
+Program tersebut juga mendefinisikan list "list3" dengan Menggunakan spread operator untuk menggabungkan elemen dari list1 ke dalam list3 yang bersisi tambahan nilai 0 kemudian dicetak.
 
-![OutputP4L3](assets/ScreenshotP4L2.png)
+Output : 
 
-Perubahan kode : 
+![p4l3](assets/p4l3.png)
+
+Tambahkan variabel list berisi NIM Anda menggunakan Spread Operators.
+
+Kode perubahan: 
 
 ```dart
   var list1 = [1, 2, null];
@@ -274,51 +310,79 @@ Perubahan kode :
   var list3 = [0, ...?list1];
   print(list3.length);
 
-  var listNim = ['2241720185'];
-  var listNim2 = [0, ...list3, ...listNim];
-  print(listNim2.length);
+  var nim = ['2241720175'];
+  var listGabungan = [...list3, ...nim];
+  print(listGabungan);
 ```
 
+Output : 
+
+![p4l3per](assets/p4l3per.png)
+
 **Langkah 4** :
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
 print(nav);
 ```
 
-Output:
-
-![OutputP4L4B](assets/ScreenshotP4L4.png)
-
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel promoActive ketika true dan false.
 
-**Jawab** : Yang terjadi adalah akan muncul pesan eror yang disebabkan variabel promoActive belum didefinisikan. Sehingga perbaikan kode nya adalah menambah variabel promoActive dengan tiipe data boolean: 
+**Jawab** : Kode tersebut mengalami error yang disebabkan oleh tidak terdefinisi nya promoActive.
+
+Output : 
+
+![p4l4](assets/p4l4.png)
+
+
+Kode true : 
 
 ```dart
+void main() {
   bool promoActive = true;
   var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
-  print(nav);
+print(nav);
+}
 ```
 
-Output: 
+Output true:
 
-![OutputP4L4B](assets/ScreenshotP4L4B.png)
+![p4l4true](assets/p4l4true.png)
+
+Kode false : 
+
+```dart
+void main() {
+  bool promoActive = false;
+  var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+print(nav);
+}
+```
+
+Output false : 
+
+![p4l4false](assets/p4l4false.png)
+
 
 **Langkah 5** : 
+
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
 print(nav2);
 ```
 
-Output : 
-
-![OutputP5](assets/ScreenshotP4L5.png)
-
-
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel login mempunyai kondisi lain.
 
-**Jawab** : Yang terjadi adalah muncul pesan error yang disebabkan variabel login belum didesfiniskan sebagai apa. Sehingga perbaikan kodenya adalah dengan meambah variabel baru login denga tipe data string : 
+**Jawab** : Kode tersebut mengalami error karena variabel login belum terdefinisasi.
+
+Output : 
+
+![p4l5](assets/p4l5.png)
+
+Kode dengan kondisi login = 'Manager' : 
 
 ```dart
   var login = 'Manager';
@@ -331,10 +395,29 @@ Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika
   print(nav2);
 ```
 
-Output : 
-![OutputP4L5B](assets/ScreenshotP4L5B.png)
+Output kondisi login = 'Manager' : 
+
+![p4l5t](assets/p4l5t.png)
+
+Kode dengan kondisi login != 'Manager' : 
+
+```dart
+  var login = 'Admin';
+  var nav2 = [
+    'Home',
+    'Furniture',
+    'Plants',
+    if (login case 'Manager') 'Inventory'
+  ];
+  print(nav2);
+```
+
+Output kondisi login != 'Manager' :
+
+![p4l5f](assets/p4l5f.png)
 
 **Langkah 6**
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var listOfInts = [1, 2, 3];
@@ -343,79 +426,112 @@ assert(listOfStrings[1] == '#1');
 print(listOfStrings);
 ```
 
-Output : 
-![OutputP6](assets/ScreenshotP4L6.png)
-
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Jelaskan manfaat Collection For dan dokumentasikan hasilnya.
 
-**Jawab** : Pada kode tersebut tidak terjadi eror dan kode berjalan sesuai. Dan juga manfaat dari Collection For adalah efisiensi dan kemudahan untuk membangun koleksi yang dinamis berdasarkan kondisi tertentu atau hasil dari perulangan.
+**Jawab** : Kode diatas berjalan dengan baik. Manfaat dari Collection for adalah lebih efisien dan lebih fleksibel karena memungkinkan kita untuk melakukan  transformasi pada elemen saat kita membangun list baru, tanpa memerlukan loop terpisah.
 
-## Praktikum 5 | Eksperimen Tipe Data Records
+Output : 
+
+![p4l6](assets/p4l6.png)
+
+## Praktikum 5 (Eksperimen Tipe Data Records)
 
 **Langkah 1** : 
+Ketik atau salin kode program berikut ke dalam fungsi main().
 
 ```dart
 var record = ('first', a: 2, b: true, 'last');
 print(record)
 ```
 
-Output: 
-![OutputP1](assets/ScreenshotP5L1.png)
-
 **Langkah 2** : 
 
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
-**Jawab** : Yang terjadi adalah akan muncul pesan eror yang disebabkan kurang tanda (;) pada akhir kode print(record).
+**Jawab** : Kode tersebut mengalami error dikarenakan tidak adanya tanda titik koma (;) pada akhir kode print(record).
+
+Output :
+
+![p5l2](assets/p5l2.png)
+
+Kode perbaikan : 
+
+```dart
+void main() {
+var record = ('first', a: 2, b: true, 'last');
+print(record);
+}
+```
 
 Output yang benar : 
 
-![OutputP5L1B](assets/ScreenshotP5L1B.png)
+![p5l2per](assets/p5l2per.png)
 
 **Langkah 3** :
+Tambahkan kode program berikut di luar scope void main(), lalu coba eksekusi (Run) kode Anda.
 
 ```dart
-void main(){
-  var record = ('first', a: 2, b: true, 'last');
-  print(record);
-  
-  var intRecord = (1, 2);
-  var swapped = tukar(intRecord);
-  print(swapped);
-}
-
 (int, int) tukar((int, int) record) {
   var (a, b) = record;
   return (b, a);
 }
 ```
 
-Output:
-
-![OutputP5L3](assets/ScreenshotP5L3.png)
-
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gunakan fungsi tukar() di dalam main() sehingga tampak jelas proses pertukaran value field di dalam Records.
 
-**Jawab** :  Dalam kasus ini, fungsi tukar() bekerja dengan baik, dan records memungkinkan pertukaran nilai dua elemen secara langsung. Hasil dari program akan mencetak record asli ('first', a: 2, b: true, 'last') dan hasil pertukaran intRecord, sehingga output akhirnya akan menunjukkan intRecord berubah dari (1, 2) menjadi (2, 1). Hal ini menegaskan bahwa Dart mendukung operasi destructuring dan penggunaan records secara penuh di versi yang Anda gunakan.
+**Jawab** : Kode tersebut dapat menjalankan fungsi tukar() dengan baik. Hasil dari program akan  menukar nilai record2, yang sebelumnnya (2, 4) menjadi (4,2).
 
-**Langkah 4** : 
+Kode : 
 
 ```dart
-// Record type annotation in a variable declaration:
-(String, int) mahasiswa = ("Mochammad Nizar Mahi", 2241720185);
-print(mahasiswa);
+(int, int) tukar((int, int) record) {
+  var (a, b) = record;
+  return (b, a);
+}
+
+void main() {
+  var record = ('first', a: 2, b: true, 'last');
+  print(record);
+
+  var record2 = (2, 4);
+  var swap = tukar(record2);
+  print('Sebelum : $record2');
+  print('Setelah : $swap');
+}
+
 ```
 
 Output : 
 
-![OutputP5L4](assets/ScreenshotP5L4.png)
+![p5l3](assets/p5l3.png)
+
+**Langkah 4** : 
+Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
+
+```dart
+// Record type annotation in a variable declaration:
+(String, int) mahasiswa;
+print(mahasiswa);
+```
 
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Inisialisasi field nama dan NIM Anda pada variabel record mahasiswa di atas. Dokumentasikan hasilnya dan buat laporannya!
 
-**Jawab** :  Dalam kasus ini, Anda dapat dengan mudah menambah
-field pada record mahasiswa dengan menambahkan tipe data yang sesuai. Misalnya, Anda dapat menambahkan field jenis kelamin dengan tipe data String, atau field Nim dengan tipe data int. 
+**Jawab** : Kode tersebut terjadi error dikarenakan variable Mahasiswa hanya didefinisikan tetapi tidak diinisialisasikan. Agar dapat berjalan, makas harus mengisikan nilai pada variable Mahasiswa.
+
+Kode perbaikan : 
+
+```dart
+// Record type annotation in a variable declaration:
+(String, int) mahasiswa = ("Mochammad Zakaro Al Fajri", 2241720175);
+print(mahasiswa);
+```
+
+Output: 
+
+![p5l4](assets/p5l4.png)
 
 **Langkah 5** :
+Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
 
 ```dart
 var mahasiswa2 = ('first', a: 2, b: true, 'last');
@@ -426,13 +542,24 @@ print(mahasiswa2.b); // Prints true
 print(mahasiswa2.$2); // Prints 'last'
 ```
 
-Output : 
-
-![OutputP5L5](assets/ScreenshotP5L5.png)
-
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gantilah salah satu isi record dengan nama dan NIM Anda, lalu dokumentasikan hasilnya dan buat laporannya!
 
-**Jawab** :  Dalam kasus ini, Anda dapat dengan mudah mengakses field pada record mahasiswa2 dengan menggunakan sintaks dot notation atau menggunakan operator $ untuk mengakses field dengan nama yang lebih panjang. Misalnya, Anda dapat menulis print(mahasiswa2.first) untuk mengakses field 'first' pada record mahasiswa2. 
+**Jawab** : Kode tersebut dapat berjalan dengan baik. kode tersebut merupakan contoh dari dengan menggunakan elemen yang berbeda. Di sini, kita mendefinisikan record mahasiswa2 dengan empat elemen. Elemen pertama adalah first, diikuti oleh dua elemen yang memiliki kunci (a dan b), dan elemen terakhir adalah string 'last'.  
+
+Kode record dengan nama dan NIM Anda : 
+
+```dart
+var mahasiswa2 = ('Mochammad Zakaro Al Fajri', a: 2241720175, b: true, 'last');
+
+print(mahasiswa2.$1); // Prints 'Mochammad Zakaro Al Fajri'
+print(mahasiswa2.a); // Prints 2241720175
+print(mahasiswa2.b); // Prints true
+print(mahasiswa2.$2); // Prints 'last'
+```
+
+Output : 
+
+![p5l5](assets/p5l5.png)
 
 ## Tugas Praktikum
 
@@ -445,125 +572,218 @@ Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gantilah salah satu isi
 
 **Jawab** : 
 
-1. Functions dalam bahasa Dart adalah blok kode yang dapat dipanggil dan dieksekusi untuk melakukan tugas tertentu. Function memungkinkan kita mengelompokkan sejumlah instruksi ke dalam satu unit untuk menghindari pengulangan kode. Dart mendukung deklarasi dan penggunaan fungsi dengan berbagai cara, baik fungsi dengan nama yang jelas atau fungsi anonim.
+1. Function pada bahasa dart merupakan kumpulan kode yang dapat dipanggil dan melakukan tugas tertentu. Keuntungan menggunakan function di Dart adalah:
+- Mengurangi duplikasi kode.
+- Meningkatkan kejelasan kode.
+- Menguraikan masalah kompleks menjadi bagian-bagian yang lebih sederhana.
+- Dapat menggunakan kode yang telah dibuat kembali.
+Berikut ini adalah contoh dari function pada dart : 
 
-Contoh : 
 ```dart
-void nama(String name) {
-  print("Halo, nama saya $name!");
+// Fungsi untuk menghitung luas persegi panjang
+double luasPersegi(double r) {
+  return  r * r;
 }
 
-nama("Mahi"); // Output: Halo, nama saya Mahi!
+void main() {
+    print(luasPersegi(2));
+}
+
 ```
+
+Output : 
+
+![tp1](assets/tp1.png)
 
 2. Jenis-jenis Parameter functions di dalam Bahasa dart
-- **Positional Parameters** : Parameter yang posisinya penting saat memanggil fungsi. Harus dipanggil sesuai urutan.
+- **Positional Parameters** : Parameter yang sangat memerhatikan urutan saat fungsi dipanggil. Wajib dipanggil sesuai urutan.
 
 Contoh :
 ```dart
-void nama(String first, String last) {
-  print("Halo, nama saya $first $last!");
+void dataDiri(String name, int nim) {
+  print("Halo, nama saya $name dan nim saya $nim");
 }
 
-nama("Nizar", "Mahi") // Output: Halo, nama saya Nizar Mahi
+dataDiri('Zakaro', 2241720175);
 ```
 
-- **Optional Positional Parameters** : Parameter yang posisinya opsional dan dapat ditinggalkan saat pemanggilan fungsi. Diberi tanda [] di deklarasi fungsi.
+Output : 
+
+![tp2a](assets/tp2a.png)
+
+- **Optional Positional Parameters** : Parameter yang memiliki sifat opsional. Maksudnya saat pemanggilan fungsi, parameter ini bisa diisi ataupun tidak. Paramater ini ditandai dengan tanda kurung [].
 
 Contoh :
 ```dart
-void nama(String first, [String? last]) {
-  print("Halo, $first ${last ?? ''}");
-}
-
-nama("Mahi");          // Output: Halo, Mahi
-nama("Nizar", "Mahi"); // Output: Halo, Andi Mahi
-```
-
-- **Named Parameters** : Parameter yang dapat dipanggil dengan nama saat pemanggilan fungsi. Diberi tanda {} di deklarasi fungsi.
-
-Contoh : 
-```dart
-void greet({required String first, String? last}) {
-  print("Halo, $first ${last ?? ''}");
-}
-
-greet(first: "Mahi");             // Output: Halo, Mahi
-greet(first: "Nizar", last: "Mahi"); // Output: Halo, Nizar Mahi
-```
-
-3. Di Dart, fungsi dianggap sebagai first-class objects, artinya fungsi dapat disimpan dalam variabel, dikembalikan dari fungsi lain, atau dilewatkan sebagai argumen ke fungsi lain.
-
-Contoh : 
-```dart
-void printMessage(String message) {
-  print(message);
-}
-
-void executeFunction(void Function(String) func, String value) {
-  func(value);
+void sapa(String salam, [String? nama]) {
+  if (nama != null) {
+    print('$salam $nama');
+  } else {
+    print(salam);
+  }
 }
 
 void main() {
-  var myFunction = printMessage;
-  executeFunction(myFunction, "Hello from first-class function!");
+  sapa('Halo');        
+  sapa('Halo', 'Kaka'); 
 }
+
 ```
 
-Dalam contoh di atas, fungsi `printMessage` disimpan dalam variabel `myFunction` dan kemudian dilewatkan sebagai argumen ke fungsi `executeFunction`. Fungsi `executeFunction` kemudian mengembalikan fungsi `printMessage` dengan nilai `"Hello from first-class function!"`.
+Output : 
 
-4. Anonymous functions (fungsi anonim) adalah fungsi tanpa nama. Fungsi ini biasanya digunakan ketika sebuah fungsi hanya dibutuhkan untuk satu kali penggunaan, seperti pada callback atau event handler.
+![tp2b](assets/tp2b.png)
+
+
+- **Named Parameters** : Parameter yang bisa dipanggil menggunakan nama saat melakukan pemanggilan fungsi yang ditandai {} di deklarasi fungsi.
 
 Contoh : 
 ```dart
-var numbers = [1, 2, 3, 4, 5];
-numbers.forEach((num) {
-  print(num * num);  // Output: 1, 4, 9, 16, 25
-});
+void sapa({String? salam, String? nama}) {
+  if (salam != null && nama != null) {
+    print('$salam, $nama!');
+  } else if (salam != null) {
+    print('$salam!');
+  } else if (nama != null) {
+    print('Halo, $nama!');
+  } else {
+    print('Halo!');
+  }
+}
+
+void main() {
+  sapa(salam: 'Selamat pagi', nama: 'Kaka'); 
+  sapa(salam: 'Hai');                        
+  sapa(nama: 'Kaka');                         
+  sapa();                                    
+}
+
 ```
+Output : 
+
+![tp2c](assets/tp2c.png)
+
+- **Parameter Default** : parameter opsional yang memiliki nilai bawaan apabila tidak diberikan saat memanggil fungsi.
+```dart
+void sapaan({String ucapan = 'Halo', String nama = 'Teman'}) {
+  print('$ucapan, $nama!');
+}
+
+void main() {
+  sapaan();                      
+  sapaan(ucapan: 'Selamat pagi');
+  sapaan(nama: 'Kaka');            
+  sapaan(ucapan: 'Assalamualaikum', nama: 'Kaka'); 
+}
+
+```
+Output : 
+
+![tp2d](assets/tp2d.png)
+
+3. Maksud dari fungsi dianggap sebagai first-class objects dimana fungsi dapat disimpan dalam variabel, Dikirim sebagai argumen ke fungsi lain, dikembalikan sebagai hasil dari fungsi lain, atau Disimpan dalam struktur data seperti list atau map sehingga lebih fleksibel dan memungkinkan penerapan berbagai teknik pemrograman fungsional.
+
+Contoh : 
+```dart
+void sapa(String nama) {
+  print('Halo, $nama!');
+}
+
+void main() {
+  var greeting = sapa; // Menyimpan fungsi sapa dalam variabel greeting
+  greeting('Kaka');    // Memanggil fungsi melalui variabel
+}
+```
+
+Output : 
+
+![tp3](assets/tp3.png)
+
+Penjelasan : Contoh diatas merupakan penerapan menyimpan fungsi dalam variabel. Kode di atas mendemonstrasikan konsep fungsi sebagai objek kelas satu dalam Dart, di mana fungsi sapa yang menerima parameter nama disimpan dalam variabel greeting. Saat greeting('Kaka') dipanggil, fungsi sapa dijalankan dengan argumen 'Kaka', menghasilkan output "Halo, Kaka!". Ini menunjukkan bahwa fungsi dapat disimpan, dipanggil melalui variabel, dan diperlakukan seperti objek lain, memberikan fleksibilitas dan modularitas dalam pemrograman.
+
+4. Anonymous functions (fungsi anonim) adalah fungsi yang tidak memiliki identitas atau nama yang jelas. Fungsi ini biasanya digunakan ketika sebuah fungsi hanya dibutuhkan untuk satu kali penggunaan, seperti pada callback atau event handler. Fungsi ini juga digunakan secara inline dalam situasi tertentu, seperti sebagai argumen untuk fungsi lain, atau saat menggunakan fungsi-fungsi seperti `map`, `filter`, dan `forEach`. Fungsi ini biasanya digunakan ketika sebuah fungsi hanya dibutuhkan untuk satu kali penggunaan, seperti pada callback atau event handler.
+
+Contoh :
+- Menggunakan Anonymous Function sebagai Callback
+```dart
+void main() {
+  var angka = [5, 3, 1];
+  
+  angka.forEach((number) {
+    print(number * 2); 
+  });
+}
+
+```
+Output : 
+
+![tp4](assets/tp4.png)
 
 5. Perbedaan Lexical Scope dan Lexical Closures:
-- Lexical Scope: adalah konsep di mana variabel yang terdefinisi di luar fungsi dapat diakses oleh fungsi yang terdefinisi di dalamnya.
+- Lexical scope adalah cara menentukan di mana variabel dapat diakses berdasarkan lokasi penulisan kode dalam program. Scope menentukan visibilitas variabel.
 
 Contoh : 
 ```dart
 void main() {
-  var message = "Hello";
-  
-  void showMessage() {
-    print(message);  // Output: Hello
+  var outer = 'Hallo, '; 
+
+  void fungsiLuar() {
+    var inner = 'teman - teman'; 
+    print(outer + inner); 
   }
 
-  showMessage();
+  fungsiLuar(); // 
 }
-```
 
-- Lexical Closures: adalah konsep di mana fungsi yang terdefinisi di dalam fungsi lain dapat mengakses variabel yang terdefinisi di luar fungsi tersebut
+```
+Output : 
+
+![tp5](assets/tp5.png)
+
+- Lexical Closures adalah konsep yang memungkinkan sebuah fungsi untuk "menyimpan" dan mengakses variabel dari lingkungan (scope) di mana fungsi itu didefinisikan, bahkan setelah fungsi tersebut selesai dijalankan. Dengan kata lain, ketika sebuah fungsi dibuat di dalam fungsi lain, fungsi tersebut dapat mengingat dan menggunakan variabel dari fungsi luar, meskipun fungsi luar sudah selesai.
 
 Contoh : 
 ```dart
-Function makeMultiplier(num multiplier) {
-  return (num value) => value * multiplier;
-}
-
 void main() {
-  var doubleValue = makeMultiplier(2);
-  print(doubleValue(5));  // Output: 10
+  Function buatSapaan(String sapaan) {
+    return () {
+      print(sapaan);
+    };
+  }
+
+  var sayHello = buatSapaan('Halo!');
+  var sayGoodbye = buatSapaan('Selamat Tinggal!'); 
+
+  sayHello(); 
+  sayGoodbye(); 
 }
 ```
+Output : 
 
-6. Di Dart, fungsi tidak mendukung secara langsung pengembalian beberapa nilai. Namun, kita bisa menggunakan tuple-like structure seperti list atau map untuk mengembalikan beberapa nilai sekaligus.
+![tp5b](assets/tp5b.png)
+
+6. Dalam Dart, kita dapat mengembalikan beberapa nilai dari sebuah fungsi dengan menggunakan berbagai pendekatan, salah satunya list. List di Dart adalah koleksi terurut dari elemen, yang memungkinkan kita menyimpan dan mengelola sekelompok data. List bisa berisi elemen dengan tipe yang sama atau tipe yang berbeda, dan kita dapat mengakses elemen-elemen ini menggunakan indeks, di mana indeks dimulai dari 0.
+Saat kita ingin mengembalikan beberapa nilai dari sebuah fungsi, menggunakan list adalah salah satu pendekatan yang paling sederhana dan mudah dipahami. Kita dapat menyimpan nilai-nilai yang ingin kita kembalikan ke dalam list dan mengembalikannya sebagai satu entitas.
 
 Contoh : 
 ```dart
-List<int> getMinMax(List<int> numbers) {
-  numbers.sort();
-  return [numbers.first, numbers.last];
+List<double> hitungTotalDanRataRata(double nilai1, double nilai2, double nilai3) {
+  double total = nilai1 + nilai2 + nilai3; 
+  double rataRata = total / 3; 
+  return [total, rataRata];
 }
 
 void main() {
-  var result = getMinMax([5, 3, 9, 1, 7]);
-  print("Min: ${result[0]}, Max: ${result[1]}");  // Output: Min: 1, Max: 9
+  var hasil = hitungTotalDanRataRata(90.0, 90.0, 95.0);
+  
+  // Mengakses elemen dalam list
+  print('Total: ${hasil[0]}, Rata-rata: ${hasil[1]}'); 
 }
+
+
 ```
+Output : 
+
+![tp6](assets/tp6.png)
+
 
